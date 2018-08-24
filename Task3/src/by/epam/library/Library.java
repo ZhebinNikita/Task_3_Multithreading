@@ -10,6 +10,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Library {
 
+    private static Library library = new Library();
+
     private String name;
     private ArrayList<Book> books;
     private int booksReaderLimit; // Maximum number of books a reader can hold
@@ -19,13 +21,18 @@ public class Library {
     private ReadingHall readingHall;
 
 
-    public Library(String name, int booksReaderLimit) {
-        this.name = name;
-        this.booksReaderLimit = booksReaderLimit;
+    private Library() {
+        this.name = "Little Library";
+        this.booksReaderLimit = 3;
         books = new ArrayList<>();
         readingHall = new ReadingHall();
 
         permission = new Semaphore(1); // 1 разрешение
+    }
+
+
+    public static Library getInstance() {
+        return library;
     }
 
 
@@ -88,9 +95,17 @@ public class Library {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     public int getBooksReaderLimit() {
         return booksReaderLimit;
+    }
+
+    public void setBooksReaderLimit(int booksReaderLimit) {
+        this.booksReaderLimit = booksReaderLimit;
     }
 
 

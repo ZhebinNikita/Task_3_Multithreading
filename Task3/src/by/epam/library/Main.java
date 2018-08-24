@@ -5,7 +5,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Library nationalLibrary = new Library("National Library of Belarus", 3);
+        Library nationalLibrary = Library.getInstance();
+
+        nationalLibrary.setName("National Library of Belarus");
+        nationalLibrary.setBooksReaderLimit(3);
+
         for(int i = 1; i <= 10; i++){
             nationalLibrary.addBook(new Book("Book" + i));
         }
