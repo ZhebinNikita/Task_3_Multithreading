@@ -18,18 +18,18 @@ public class Main {
 
 
         // take & return books example
-        /*antoshka.setDesiredBooks("Book1", "Book2", "Book3");
-        antoshka.addBooks("RBook1", "RBook2", "RBook3");
-        antoshka.setReturnedBooks("RBook1", "RBook2", "RBook3");
+        antoshka.setDesiredBooks("Book1", "Book2", "Book3");
+        antoshka.addBooks("RrrBook1", "RrrBook2", "RrrBook3");
+        antoshka.setReturnedBooks("RrrBook1", "RrrBook2", "RrrBook3");
 
         nikita.setDesiredBooks("Book1", "Book2", "Book3");
 
         kristina.setDesiredBooks("Book1", "Book2", "Book3", "Book4", "Book5", "Book6", "Book7");
-*/
 
-        // transfer books in a Reading Hall example
-        antoshka.addBooks("b1", "b2", "b3");
-        antoshka.setTransferredBooksTo(nikita, new Book("b1"), new Book("b2"), new Book("b3"));
+
+        // transfer books in a Reading Hall
+        /*antoshka.addBooks("b1", "b2", "b3");
+        antoshka.setTransferredBooksTo(nikita, new Book("b1"), new Book("b2"), new Book("b3"));*/
 
         antoshka.start();
         nikita.start();
